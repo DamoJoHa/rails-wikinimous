@@ -1,0 +1,12 @@
+<div class="title-box border-bottom">
+  <h1><%= @article.title %></h1>
+  <div>
+    <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+      <i class="fa-solid fa-trash-can"></i>
+    <% end %>
+    <%= link_to edit_article_path(@article) do %>
+      <i class="fa-solid fa-pen"></i>
+    <% end %>
+  </div>
+</div>
+<p><%= @article.context %></p>

@@ -3,6 +3,7 @@
   <head>
     <title>RailsWikinimous</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="border-bottom">
+      <h1><%= link_to "MyWiki", articles_path %></h1>
+      <%= link_to "New Article", new_article_path %>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

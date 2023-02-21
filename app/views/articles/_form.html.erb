@@ -1,0 +1,11 @@
+<%= form_with model: @article do |f| %>
+  <div class="form-holder">
+    <%= f.label :title, "Title:" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-holder">
+    <%= f.label :context, "Content:"%>
+    <%= f.text_field :context %>
+  </div>
+  <%= f.submit %>
+<% end %>
